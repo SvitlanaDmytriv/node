@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/SvitlanaDmytriv/node/issues"
   },
-  "homepage": "https://github.com/SvitlanaDmytriv/node#readme",
+  "homepage": "https://github.com/SvitlanaDmytriv/node",
   "devDependencies": {
     "eslint": "^7.32.0",
     "husky": "^7.0.2",
