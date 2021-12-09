@@ -1,0 +1,42 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "./src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon start",
+    "prepare": "husky install",
+    "app:list": "node src/index.js -a list",
+    "app:get": "node src/index.js -a get -i",
+    "app:remove": "node src/index.js -a remove -i",
+    "app:add": "node src/index.js -a add"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvitlanaDmytriv/node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SvitlanaDmytriv/node/issues"
+  },
+  "homepage": "https://github.com/SvitlanaDmytriv/node#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "commander": "^8.1.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
