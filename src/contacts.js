@@ -57,7 +57,7 @@ const addContact = async (name, email, phone) => {
       path.join(__dirname, 'db', 'contacts.json'),
       JSON.stringify(contacts, null, 2),
     )
-    return newContact
+    return contacts
   } catch (error) {
     console.error(error)
     process.exit(1)

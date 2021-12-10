@@ -30,7 +30,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       const contactById = await getContactById(id)
       if (contactById) {
         console.log(chalk.blue('Contact found'))
-        console.log(contactById)
+        console.table(contactById)
         return
       }
       console.log(chalk.red('Contact not found'))
@@ -40,14 +40,14 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     case 'add':
       const contact = await addContact(name, email, phone)
       console.log(chalk.green('Add new contact'))
-      console.log(contact)
+      console.table(contact)
       break
 
     case 'remove':
       const contactArray = await removeContact(id)
 
       console.log(chalk.green('Remove contact'))
-      console.log(contactArray)
+      console.table(contactArray)
       break
 
     default:
